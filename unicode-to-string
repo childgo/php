@@ -1,0 +1,16 @@
+
+
+
+
+//function to convert unicode to textstring
+function unicode_to_textstring($str)
+{
+    $rawstr = pack('H*', $str);
+    $newstr =  iconv('UTF-16BE', 'UTF-8', $rawstr);
+    return $newstr;
+}
+
+
+
+//title=alscocheck($_GET['title']);
+//$title=unicode_to_textstring($title);
